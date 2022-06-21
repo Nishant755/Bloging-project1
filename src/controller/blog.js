@@ -15,12 +15,13 @@ const createBlog = async function(req, res) {
 //============================================================================
 
 const getBlog = async function (req,res){
-    // const data =req.query
-    // data.isDeleted=false
-    // data.isPublished=true
-//console.log(data)
+    const data =req.query
+    data.isDeleted=false
+    data.isPublished=true
+console.log(data)
 
-    const result=await blogModel.find({ category: 'Array', isDeleted: false, isPublished: true })
+    const result=await blogModel.find( data )
+   // console.log(result)
     return res.status(200).send(result)
 }
 

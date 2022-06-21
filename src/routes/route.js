@@ -8,6 +8,7 @@ const authController= require("../controller/auth.js")
 router.post("/blog", blogController.createBlog)
 router.post("/Author", authController.createAuthor)
 router.get("/blogs", blogController.getBlog)
+router.get("/updateblog", blogController.updateBlog)
 
 
 
